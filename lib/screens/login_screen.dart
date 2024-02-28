@@ -1,30 +1,46 @@
 import 'package:flutter/material.dart';
 import 'package:sneakerbar/widgets/button_wid.dart';
+import 'package:sneakerbar/widgets/textfield_wid.dart';
 
 class LoginScreen extends StatelessWidget {
-  const LoginScreen({super.key});
+  final TextEditingController username = TextEditingController();
+  final TextEditingController password = TextEditingController();
+  final keyForm = GlobalKey<FormState>();
+  LoginScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(),
-      body: ListView(
-        padding: const EdgeInsets.all(20),
-        children: [
-          const Text("SNEAKERBAR"),
-          const SizedBox(height: 10),
-          const Text(
-            "WE CREATE DIGITAL SOLUTIONS THAT DELIGHT, ENGAGE AND CONVERT USERS EVERY DAY",
-            style: TextStyle(fontSize: 40, fontWeight: FontWeight.w100),
-          ),
-          const SizedBox(height: 20),
-          GestureDetector(
-            child: ButtonWidget(
-                height: 40,
-                width: MediaQuery.of(context).size.width,
-                title: "Login"),
-          )
-        ],
+      body: Form(
+        key: keyForm,
+        child: ListView(
+          padding: const EdgeInsets.all(20),
+          children: [
+            //title application
+            const Text(
+              "SNEAKERBAR",
+              style: TextStyle(fontWeight: FontWeight.w800),
+            ),
+            const SizedBox(height: 10),
+            //description de l'application
+            const Text(
+              "WE CREATE DIGITAL SOLUTIONS THAT DELIGHT, ENGAGE AND CONVERT USERS EVERY DAY",
+              style: TextStyle(fontSize: 40, fontWeight: FontWeight.w100),
+            ),
+            const SizedBox(height: 20),
+            TextFieldWidget(controller: username, title: "USERNAME"),
+            const SizedBox(height: 10),
+            TextFieldWidget(controller: username, title: "PASSWORD"),
+            const SizedBox(height: 10),
+            GestureDetector(
+              child: ButtonWidget(
+                  height: 45,
+                  width: MediaQuery.of(context).size.width,
+                  title: "Login"),
+            )
+          ],
+        ),
       ),
     );
   }

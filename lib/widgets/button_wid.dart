@@ -23,7 +23,7 @@ class ButtonWidget extends StatelessWidget {
       child: Center(
         child: Text(
           title.toUpperCase(),
-          style: TextStyle(color: txtColors),
+          style: TextStyle(color: txtColors, fontWeight: FontWeight.bold),
         ),
       ),
     );
