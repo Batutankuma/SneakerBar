@@ -26,12 +26,12 @@ class LoginScreen extends StatelessWidget {
             //description de l'application
             const Text(
               "WE CREATE DIGITAL SOLUTIONS THAT DELIGHT, ENGAGE AND CONVERT USERS EVERY DAY",
-              style: TextStyle(fontSize: 40, fontWeight: FontWeight.w100),
+              style: TextStyle(fontSize: 40, fontWeight: FontWeight.w200),
             ),
             const SizedBox(height: 20),
-            TextFieldWidget(controller: username, title: "USERNAME"),
+            TextFieldWidget(controller: username, title: "Username"),
             const SizedBox(height: 10),
-            TextFieldWidget(controller: username, title: "PASSWORD"),
+            TextFieldWidget(controller: username, title: "Password"),
             const SizedBox(height: 10),
             GestureDetector(
               child: ButtonWidget(
