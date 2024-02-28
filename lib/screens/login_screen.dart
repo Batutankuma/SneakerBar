@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:sneakerbar/widgets/button_wid.dart';
 
 class LoginScreen extends StatelessWidget {
   const LoginScreen({super.key});
@@ -16,11 +17,12 @@ class LoginScreen extends StatelessWidget {
             "WE CREATE DIGITAL SOLUTIONS THAT DELIGHT, ENGAGE AND CONVERT USERS EVERY DAY",
             style: TextStyle(fontSize: 40, fontWeight: FontWeight.w100),
           ),
-          ElevatedButton(
-            onPressed: null,
-            child: Center(
-              child: Text("Login"),
-            ),
+          const SizedBox(height: 20),
+          GestureDetector(
+            child: ButtonWidget(
+                height: 40,
+                width: MediaQuery.of(context).size.width,
+                title: "Login"),
           )
         ],
       ),
