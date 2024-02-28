@@ -35,9 +35,10 @@ class LoginScreen extends StatelessWidget {
             const SizedBox(height: 10),
             GestureDetector(
               child: ButtonWidget(
-                  height: 45,
-                  width: MediaQuery.of(context).size.width,
-                  title: "Login"),
+                height: 45,
+                width: MediaQuery.of(context).size.width,
+                title: "Login",
+              ),
             )
           ],
         ),
